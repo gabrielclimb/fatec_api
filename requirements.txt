@@ -6,6 +6,7 @@ Flask == 1.0.2
 
 # scraping.py: 4
 pandas == 0.23.4
+lxml>=4.0.0
 
 # scraping.py: 3
 requests == 2.18.4
