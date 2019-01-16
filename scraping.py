@@ -56,7 +56,6 @@ class Scraping:
 
 app = Flask(__name__)
 
-
 @app.route('/fatecapi/', methods=['GET'])
 def home():
 
@@ -67,7 +66,7 @@ def home():
     # <h1>Login {login} - Senha {senha}</h1>
     return f"<h1>Média Ponderada -> {nota.media_ponderada()}</h1>"\
         f"<p>{nota.get_df()}</p>"
-
+        
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,1 @@
+web: python scraping.py
