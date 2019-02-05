@@ -64,7 +64,7 @@ def home():
     senha = parametros['senha']
     nota = Scraping(login, senha)
     # <h1>Login {login} - Senha {senha}</h1>
-    # http://galinhaseovos.herokuapp.com/fatecapi/?login=login&senha=senha
+    # http://galinhaseovos.herokuapp.com/fatecapi/?login=gabrielclimb&senha=fatimabs
     return f"<h1>Média Ponderada -> {nota.media_ponderada()}</h1>"\
         f"<p>{nota.get_df()}</p>"
         
