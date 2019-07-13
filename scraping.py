@@ -17,7 +17,8 @@ class Scraping:
 
         self.login()
         self.get_pagina_notas()
-
+        self.s.close()
+        ndin
     def login(self):
 
         payload = {
@@ -56,7 +57,7 @@ class Scraping:
 
 app = Flask(__name__)
 
-@app.route('/fatecapi/', methods=['GET'])
+@app.route('/fatecapi/', methods=['POST'])
 def home():
 
     parametros = request.args.to_dict()
@@ -65,11 +66,11 @@ def home():
     nota = Scraping(login, senha)
     # <h1>Login {login} - Senha {senha}</h1>
     # http://galinhaseovos.herokuapp.com/fatecapi/?login=gabrielclimb&senha=fatimabs
-    return f"<h1>Média Ponderada -> {nota.media_ponderada()}</h1>"\
+    return f"<h1>Média Ponderada -> {round(nota.media_ponderada(), 3)}</h1>"\
         f"<p>{nota.get_df()}</p>"
         
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-    # nota = Scraping("16100722", "fatimabs")
+    nota = Scraping("16100722", "fatimabs")
