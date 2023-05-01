@@ -2,7 +2,7 @@
 # https://github.com/damnever/pigar
 
 # scraping.py: 2
-Flask == 1.0.2
+Flask == 2.3.2
 
 # scraping.py: 4
 pandas == 0.23.4
